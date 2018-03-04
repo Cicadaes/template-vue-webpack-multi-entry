@@ -1,0 +1,1 @@
+Vue webpack multi entry
