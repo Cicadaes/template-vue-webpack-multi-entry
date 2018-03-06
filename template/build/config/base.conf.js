@@ -5,7 +5,8 @@ const moduleConfig = require('../entry/' + moduleName + '.conf')
 const htmlTemplatePath = 'src/index.tpl.html'
 
 function assembleAssetRoot (env, mod) {
-  return path.resolve(__dirname, '../../dests/', env, mod)
+//   return path.join(__dirname, '../../dests/', env, mod)
+  return '/dest/' + env + mod
 }
 
 module.exports = {
