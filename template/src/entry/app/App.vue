@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <h1>Hellow World!</h1>
+      <h1>Hellow World</h1>
   </div>
 </template>
 <script >

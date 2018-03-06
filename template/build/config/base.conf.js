@@ -1,4 +1,3 @@
-const path = require('path')
 const moduleName = process.env.MODULE_NAME || 'app'
 const modulePath = process.env.MODULE_PATH || 'entry/app'
 const moduleConfig = require('../entry/' + moduleName + '.conf')
