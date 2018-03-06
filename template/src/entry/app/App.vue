@@ -4,6 +4,8 @@
   </div>
 </template>
 <script >
+import './app.styl'
+
 export default {
 
 }
