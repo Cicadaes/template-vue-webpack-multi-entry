@@ -18,12 +18,12 @@ const _hotMiddleware = hotMiddleware(compiler, {
   heartbeat: 2000
 })
 // force page reload when html-webpack-plugin template changes
-// compiler.plugin('compilation', function (compilation) {
-//   compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
-//     _hotMiddleware.publish({ action: 'reload' })
-//     cb()
-//   })
-// })
+compiler.plugin('compilation', function (compilation) {
+  compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
+    _hotMiddleware.publish({ action: 'reload' })
+    cb()
+  })
+})
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || baseConfig.dev.port
