@@ -7,6 +7,7 @@ const webpackBaseConfig = require('./webpack.base.conf')
 const utilCommon = require('../util/common')
 
 module.exports = merge(webpackBaseConfig, {
+  mode: baseConfig.dev.mode,
   module: {
     rules: utilCommon.styleLoaders({ sourceMap: baseConfig.dev.cssSourceMap })
   },

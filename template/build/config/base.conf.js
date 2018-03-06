@@ -18,6 +18,7 @@ module.exports = {
     productionSourceMap: true
   },
   dev: {
+    mode: 'development',
     env: {
       NODE_ENV: '"development"'
     },
