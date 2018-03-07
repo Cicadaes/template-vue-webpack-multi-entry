@@ -12,13 +12,14 @@ const splitModule = modulePath.split("\/");
 const moduleTargetName = splitModule[splitModule.length-1]+version
 
 function assembleAssetRoot (env, mod) {
-  return path.join(__dirname, '../../dests/', env, mod)
-  // return '/dest/' + env + mod
+  if (process.env.NODE_ENV === 'production') {
+    return path.join(__dirname, '../../dests/', env, mod)
+  }
+  return '/dest/' + env + mod
 }
 
 function assembleIndexPath(env, mod, targetName){
   return path.resolve(__dirname, '../../dests/',env,mod,targetName+'.html')
-  // return '/dests/' + env + mod + targetName + '.html'
 }
 
 
@@ -43,7 +44,7 @@ module.exports = {
     env: {
       NODE_ENV: '"development"'
     },
-    port: 8080,
+    port: 8082,
     template: htmlTemplatePath,
     assetsPublicPath: '/',
     assetsSubDirectory: 'static',
