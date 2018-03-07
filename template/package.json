@@ -5,7 +5,8 @@
   "keywords": [],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node build/script/dev-server.js"
+    "start": "node build/script/dev-server.js",
+    "build": "node build/script/build.js"
   },
   "author": "author",
   "license": "ISC",
@@ -30,9 +31,11 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "express": "^4.16.2",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "github:webpack-contrib/html-webpack-plugin",
     "image-webpack-loader": "^4.1.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
+    "ora": "^2.0.0",
     "postcss-loader": "^2.1.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
